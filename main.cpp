@@ -2,11 +2,10 @@
 
 using namespace std;
 
-enum Rank (NULL, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE);
-enum Suit (NULL, SPADE, HEART, DIAMOND, CLUB);
+enum Rank (TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE, NOTHING);
+enum Suit (SPADE, HEART, DIAMOND, CLUB, NOTHING);
 
-class Card
-{
+class Card{
 	private:
 		int Suit, Rank;
 
@@ -40,6 +39,52 @@ class Card
 
 		~Card();
 		
+};
+
+class DeckOfCards{
+    private:
+        Card playing_cards[52];
+    public:
+        void initialize();
+}
+
+void DeckOfCards:: initialize(){
+    int i;
+    for()
+}
+
+class Player{
+	private:
+		string name;
+		int id;
+	public:
+		static Player(string name, int id) {
+			this->name = name;
+			this->id = id;
+		}
+		
+		//Getters
+		string getName() {
+			return this->name;
+		}
+
+		int getId() {
+			return this->id;
+		}
+
+		//Setters
+		string setName(string name) {
+			this->name = string;
+			return this->name;
+		}
+
+		int setId(int id) {
+			this->id = id;
+			return this->id;
+		}
+
+		~Player();
+	
 };
 
 int main(){
