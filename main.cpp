@@ -2,8 +2,8 @@
 
 using namespace std;
 
-enum Rank (TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE);
-enum Suit (SPADE, HEART, DIAMOND, CLUB);
+enum Rank (TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE, NOTHING);
+enum Suit (SPADE, HEART, DIAMOND, CLUB, NOTHING);
 
 class Card{
 	private:
@@ -49,7 +49,8 @@ class DeckOfCards{
 }
 
 void DeckOfCards:: initialize(){
-    // for()
+    int i;
+    for()
 }
 
 int main(){
