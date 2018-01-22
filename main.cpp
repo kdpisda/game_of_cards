@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -10,9 +10,9 @@ class Card{
 		int Suit, Rank;
 
 	public:
-		Card(int Suit, int Rank) {
-			this->Suit = Suit;
-			this->Rank = Rank;
+		Card(int suit = 4, int rank = Rank4) {
+			this->Suit = suit;
+			this->Rank = rank;
 		}
 
 		//Getters
@@ -43,17 +43,47 @@ class Card{
 
 class DeckOfCards{
     private:
-        Card playing_cards[52];
+        Card playingCard[52];
     public:
         void initialize();
+
+        void shuffleDeck();
+
+        Card pickACard();
 }
 
-void DeckOfCards:: initialize(){
-    int i;
-    for()
+void DeckOfCards :: initialize(){
+    int i, j, count = 0;
+    for(i = 0, i < 4; i++){
+        for(j = 0; j < 13; j++){
+            this->playingCard[count].SetRank(Rank[j]);
+            this->playingCard[count].SetSuit(Suit[i]);
+            count++;
+        }
+    }
+}
+
+void DeckOfCards :: shuffleDeck(){
+    random_shuffle(begin(this->playingCard), end(this->playingCard));
+}
+
+Card DeckOfCards :: pickACard(){
+    Card tempCard;
+    randomize();
+    int i = random(52);
+    tempCard = this->playingCard[i];
+    remove(begin(this->playingCard), end(this->playingCard), i);
+    this->shuffle();
+    return tempCard;
 }
 
 int main(){
-    
+    DeckOfCards Deck;
+    Card currentCard;
+    Deck.initialize();
+    currentCard = DeckOfCards.pickACard();
+    for(int i = 0; i < 4; i++){
+        cout << "\n" << currentCard.GetRank() << "\t" << currentCard.GetSuit() << "\n";
+    }
     return 0;
 }
