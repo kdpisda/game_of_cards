@@ -2,8 +2,8 @@
 
 using namespace std;
 
-enum Rank (TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE);
-enum Suit (SPADE, HEART, DIAMOND, CLUB);
+enum Rank (NULL, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE);
+enum Suit (NULL, SPADE, HEART, DIAMOND, CLUB);
 
 class Card
 {
